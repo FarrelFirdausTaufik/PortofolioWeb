@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import { cn } from "@/lib/utils"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { Button } from "@/components/ui/button"
-import { Download, Github, Linkedin, Mail } from "lucide-react"
+import { Download } from "lucide-react"
 import Image from "next/image"
 
 export function SiteHeader() {
@@ -43,7 +43,7 @@ export function SiteHeader() {
           <ul className="flex items-center gap-6 text-sm">
             <li>
               <a href="#experience" className="opacity-80 transition-opacity hover:opacity-100">
-                About & Leadership Experience
+                About & Leadership
               </a>
             </li>
             <li>
@@ -71,33 +71,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-1.5">
           <ThemeToggle />
 
-          <Button asChild variant="ghost" size="icon" aria-label="LinkedIn profile">
-            <a
-              href="https://www.linkedin.com/in/farrel-firdaus-taufik-026319385/"
-              target="_blank"
-              rel="noreferrer noopener"
-              title="LinkedIn"
-            >
-              <Linkedin className="size-4" aria-hidden="true" />
-            </a>
-          </Button>
-          <Button asChild variant="ghost" size="icon" aria-label="GitHub profile">
-            <a href="https://github.com/FarrelFirdausTaufik" target="_blank" rel="noreferrer noopener" title="GitHub">
-              <Github className="size-4" aria-hidden="true" />
-            </a>
-          </Button>
-          <Button asChild variant="ghost" size="icon" aria-label="Send Email">
-            <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=farrelt1307@gmail.com"
-              target="_blank"
-              rel="noreferrer noopener"
-              title="Compose in Gmail"
-            >
-              <Mail className="size-4" aria-hidden="true" />
-            </a>
-          </Button>
-
-          {/* existing Download CV button */}
+          {/* Download CV button */}
           <a
             href="/FarrelFirdausTaufiksResume.pdf"
             target="_blank"

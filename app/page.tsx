@@ -6,7 +6,8 @@ import { Skills } from "@/components/skills"
 import { Projects } from "@/components/projects"
 import { EducationAwards } from "@/components/education-awards"
 import { ContactCTA } from "@/components/contact-cta"
-import { Download } from "lucide-react"
+import { Download, Github, Linkedin, Mail } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
   title: "Your Name — Interactive CV",
@@ -33,6 +34,34 @@ export default function Page() {
         <p className="mt-6 text-pretty leading-relaxed">
           I'm a passionate about building modern, reliable web applications. I combine solid technical fundamentals, clean design practices, and a drive for continuous learning to deliver impactful digital solutions.
         </p>
+
+        <div className="mt-6 flex items-center justify-center gap-2">
+          <Button asChild variant="ghost" size="icon" aria-label="LinkedIn profile">
+            <a
+              href="https://www.linkedin.com/in/farrel-firdaus-taufik-026319385/"
+              target="_blank"
+              rel="noreferrer noopener"
+              title="LinkedIn"
+            >
+              <Linkedin className="size-5" aria-hidden="true" />
+            </a>
+          </Button>
+          <Button asChild variant="ghost" size="icon" aria-label="GitHub profile">
+            <a href="https://github.com/FarrelFirdausTaufik" target="_blank" rel="noreferrer noopener" title="GitHub">
+              <Github className="size-5" aria-hidden="true" />
+            </a>
+          </Button>
+          <Button asChild variant="ghost" size="icon" aria-label="Send Email">
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=farrelt1307@gmail.com"
+              target="_blank"
+              rel="noreferrer noopener"
+              title="Compose in Gmail"
+            >
+              <Mail className="size-5" aria-hidden="true" />
+            </a>
+          </Button>
+        </div>
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <a

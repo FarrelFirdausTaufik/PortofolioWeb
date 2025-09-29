@@ -43,18 +43,18 @@ export function Skills() {
   }, [])
 
   return (
-    <section id="skills" aria-labelledby="skills-heading" className="border-t border-border">
+    <section id="skills" aria-labelledby="skills-heading" className="border-t border-border transition-colors duration-300 hover:bg-accent/5">
       <div ref={sectionRef} className="mx-auto max-w-5xl px-6 py-16 md:py-20">
         <h2 id="skills-heading" className="text-pretty text-2xl font-semibold md:text-3xl">
           Skills & Technologies
         </h2>
         <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {Object.entries(SKILLS).map(([group, items]) => (
-            <div key={group} data-skill-card className="rounded-lg border border-border p-5">
-              <h3 className="text-sm font-semibold">{group}</h3>
+            <div key={group} data-skill-card className="group rounded-lg border border-border p-5 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:border-primary/20 hover:bg-accent/5">
+              <h3 className="text-sm font-semibold transition-colors duration-300 group-hover:text-primary">{group}</h3>
               <ul className="mt-3 flex flex-wrap gap-2">
                 {items.map((s) => (
-                  <li key={s} className="rounded-md border border-border px-2 py-1 text-xs text-muted-foreground">
+                  <li key={s} className="rounded-md border border-border px-2 py-1 text-xs text-muted-foreground transition-all duration-200 hover:scale-110 hover:bg-accent hover:text-primary hover:border-primary/20">
                     {s}
                   </li>
                 ))}

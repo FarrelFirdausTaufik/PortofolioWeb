@@ -27,7 +27,7 @@ const PROJECTS: Project[] = [
     ],
     github: "https://github.com/FarrelFirdausTaufik/Group-Project_Brewora-Coffee",
     editUrl: "https://your-link.com/alpha-edit",
-    image: "/2025-09-29 02-26-56.gif",
+    image: "/kopi.gif",
   },
   {
     name: "Kidneys Detector",
@@ -39,7 +39,7 @@ const PROJECTS: Project[] = [
     ],
     github: "https://github.com/FarrelFirdausTaufik/Group-Project_Kidneys-Detector",
     editUrl: "https://your-link.com/design-system-notion",
-    image: "/2025-09-29 02-49-13 - Trim.gif",
+    image: "/kiney.gif",
   },
   {
     name: "VS Travel",
@@ -51,7 +51,7 @@ const PROJECTS: Project[] = [
     ],
     github: "https://github.com/FarrelFirdausTaufik/VS-Travel",
     editUrl: "https://your-link.com/analytics-docs",
-    image: "/2025-09-29 03-00-03 - Trim.gif",
+    image: "/trepel.gif",
   },
   {
     name: "Video Editing",
@@ -63,7 +63,7 @@ const PROJECTS: Project[] = [
     ],
     github: "https://github.com/FarrelFirdausTaufik/Typography_everythingUAre",
     editUrl: "https://your-link.com/mobile-edit",
-    image: "/EverythingUAre - Trim.gif",
+    image: "/mv.gif",
   },
 ]
 
@@ -95,21 +95,21 @@ export function Projects() {
   }, [])
 
   return (
-    <section id="projects" aria-labelledby="projects-heading" className="border-t border-border">
+    <section id="projects" aria-labelledby="projects-heading" className="border-t border-border transition-colors duration-300 hover:bg-accent/5">
       <div ref={sectionRef} className="mx-auto max-w-5xl px-6 py-16 md:py-20">
         <h2 id="projects-heading" className="text-pretty text-2xl font-semibold md:text-3xl">
           Project Highlights
         </h2>
         <div className="mt-8 grid gap-6 md:grid-cols-2">
           {PROJECTS.map((p) => (
-            <article key={p.name} data-project className="flex flex-col rounded-lg border border-border p-5">
+            <article key={p.name} data-project className="group flex flex-col rounded-lg border border-border p-5 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:border-primary/20 hover:bg-accent/5">
               <div className="aspect-video w-full overflow-hidden rounded-md border border-border">
                 <Image
                   alt={`Preview of ${p.name}`}
                   src={p.image || "/placeholder.svg"}
                   width={1200}
                   height={630}
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover transition-transform duration-300 hover:scale-110"
                 />
               </div>
               <header className="mt-4">
