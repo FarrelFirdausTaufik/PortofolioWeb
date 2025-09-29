@@ -10,9 +10,9 @@ import { Download, Github, Linkedin, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
-  title: "Your Name — Interactive CV",
+  title: "Farrel Firdaus Taufik — Software Engineer & Video Editor",
   description:
-    "Senior Software Engineer focused on performant frontends, delightful UX, and robust full‑stack systems.",
+    "Software Engineering student with a strong interest in Artificial Intelligence and Web Development. Experienced as an entry-level video editor, particularly in short movies and music videos.",
 }
 
 export default function Page() {
