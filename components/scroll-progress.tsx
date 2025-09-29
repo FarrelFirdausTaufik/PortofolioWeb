@@ -8,30 +8,37 @@ export function ScrollProgress() {
   const barRef = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    if (reduce) return
-    gsap.registerPlugin(ScrollTrigger)
-    if (!barRef.current) return
+    if (typeof window === 'undefined') return;
+    
+    try {
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      if (reduce) return
+      gsap.registerPlugin(ScrollTrigger)
+      if (!barRef.current) return
 
-    const tween = gsap.to(barRef.current, {
-      scaleX: 1,
-      ease: "none",
-      transformOrigin: "0 0",
-      scrollTrigger: {
-        start: 0,
-        end: "max",
-        scrub: true,
-        onUpdate: (self) => {
-          if (barRef.current) {
-            barRef.current.style.transform = `scaleX(${self.progress})`
-          }
+      const tween = gsap.to(barRef.current, {
+        scaleX: 1,
+        ease: "none",
+        transformOrigin: "0 0",
+        scrollTrigger: {
+          start: 0,
+          end: "max",
+          scrub: true,
+          onUpdate: (self) => {
+            if (barRef.current) {
+              barRef.current.style.transform = `scaleX(${self.progress})`
+            }
+          },
         },
-      },
-    })
+      })
 
-    return () => {
-      tween?.scrollTrigger?.kill()
-      tween?.kill()
+      return () => {
+        tween?.scrollTrigger?.kill()
+        tween?.kill()
+      }
+    } catch (error) {
+      console.error('Error initializing scroll progress:', error)
+      return () => {}
     }
   }, [])
 
