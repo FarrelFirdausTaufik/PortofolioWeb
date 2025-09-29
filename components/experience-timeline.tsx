@@ -13,7 +13,7 @@ type Role = {
 
 const ROLES: Role[] = [
   {
-    company: "_______________________________________________________________________________________________________________________________________________________________",
+    company: "Personal Introduction",
     title: "About Me",
     period: "Feb 2023 — Feb 2024",
     bullets: [
@@ -77,8 +77,8 @@ export function ExperienceTimeline() {
 
   return (
     <section id="experience" aria-labelledby="experience-heading" className="border-t border-border bg-card">
-      <div className="mx-auto max-w-5xl px-6 py-16 md:py-20">
-        <h2 id="experience-heading" className="text-pretty text-2xl font-semibold md:text-3xl">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 py-12 sm:py-16 md:py-20">
+        <h2 id="experience-heading" className="text-pretty text-xl sm:text-2xl font-semibold md:text-3xl break-words">
           About & Leadership Experience
         </h2>
         <div ref={containerRef} className="relative mt-10 grid gap-8 md:mt-12">
@@ -90,18 +90,18 @@ export function ExperienceTimeline() {
             <article
               key={role.company + idx}
               data-timeline-item
-              className="relative grid gap-3 rounded-lg border border-border p-5 md:grid-cols-[24px_1fr] md:gap-6 md:border-0 md:p-0"
+              className="relative grid gap-3 rounded-lg border border-border p-4 sm:p-5 md:grid-cols-[24px_1fr] md:gap-6 md:border-0 md:p-0"
             >
               <div className="hidden md:block">
                 <div className="relative mt-1.5 size-[10px] rounded-full bg-primary md:ml-[7px]" />
               </div>
               <div>
-                <header className="flex flex-wrap items-center justify-between gap-2">
+                <header className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2">
                   <h3 className="text-base font-semibold md:text-lg">{role.title}</h3>
                   <span className="text-xs text-muted-foreground">{role.period}</span>
                 </header>
-                <p className="mt-1 text-sm text-muted-foreground">{role.company}</p>
-                <ul className="mt-3 list-disc pl-5 text-sm leading-relaxed">
+                <p className="mt-1 text-sm text-muted-foreground break-words">{role.company}</p>
+                <ul className="mt-3 list-disc pl-4 sm:pl-5 text-sm leading-relaxed text-pretty">
                   {role.bullets.map((b, i) => (
                     <li key={i}>{b}</li>
                   ))}

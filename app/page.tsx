@@ -36,6 +36,7 @@ export default function Page() {
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <a
+              href="/FarrelFirdausTaufiksResume.pdf"
               target="_blank"
               rel="noreferrer noopener"
               download

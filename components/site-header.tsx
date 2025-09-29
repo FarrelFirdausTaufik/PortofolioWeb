@@ -99,6 +99,7 @@ export function SiteHeader() {
 
           {/* existing Download CV button */}
           <a
+            href="/FarrelFirdausTaufiksResume.pdf"
             target="_blank"
             rel="noreferrer noopener"
             download
