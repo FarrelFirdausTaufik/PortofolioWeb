@@ -18,14 +18,14 @@ type Project = {
 
 const PROJECTS: Project[] = [
   {
-    name: "Breewera Coffe",
+    name: "Brewora Coffee",
     role: "HTML/CSS · JavaScript",
     impact: [
       "Implemented backend features to enhance functionality.",
       "Integrated order systems, including payment gateways and related services.",
       "Optimized overall system performance for better efficiency and scalability.",
     ],
-    github: "https://github.com/yourname/project-alpha",
+    github: "https://github.com/FarrelFirdausTaufik/Group-Project_Brewora-Coffee",
     editUrl: "https://your-link.com/alpha-edit",
     image: "/2025-09-29 02-26-56.gif",
   },
@@ -37,19 +37,19 @@ const PROJECTS: Project[] = [
       "Implemented machine learning techniques in image analysis systems.",
       "Delivered a fast and efficient solution for early disease detection.",
     ],
-    github: "https://github.com/yourname/design-system",
+    github: "https://github.com/FarrelFirdausTaufik/Group-Project_Kidneys-Detector",
     editUrl: "https://your-link.com/design-system-notion",
     image: "/2025-09-29 02-49-13 - Trim.gif",
   },
   {
-    name: "Realtime Analytics",
+    name: "VS Travel",
     role: "HTML/CSS · JavaScript",
     impact: [
       "Built responsive travel website with interactive UI and form validation",
       "Developed mobile-first design with JavaScript animations and user feedback",
       "Created complete travel booking system with multi-page navigation",
     ],
-    github: "https://github.com/yourname/realtime-analytics",
+    github: "https://github.com/FarrelFirdausTaufik/VS-Travel",
     editUrl: "https://your-link.com/analytics-docs",
     image: "/2025-09-29 03-00-03 - Trim.gif",
   },
@@ -61,7 +61,7 @@ const PROJECTS: Project[] = [
       "Synchronized animated text with music tracks.",
       "Applied time remapping techniques to enhance motion and pacing.",
     ],
-    github: "https://github.com/yourname/mobile-app",
+    github: "https://github.com/FarrelFirdausTaufik/Typography_everythingUAre",
     editUrl: "https://your-link.com/mobile-edit",
     image: "/EverythingUAre - Trim.gif",
   },

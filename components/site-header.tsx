@@ -4,7 +4,8 @@ import { useEffect, useState } from "react"
 import { cn } from "@/lib/utils"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { Button } from "@/components/ui/button"
-import { Github, Linkedin, Mail } from "lucide-react"
+import { Download, Github, Linkedin, Mail } from "lucide-react"
+import Image from "next/image"
 
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false)
@@ -28,8 +29,15 @@ export function SiteHeader() {
       </a>
       <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3 md:px-6">
         <div className="flex items-center gap-3">
-          <div aria-hidden="true" className="size-6 rounded-sm bg-primary" title="" />
-          <span className="text-sm font-medium tracking-wide">Farrel Firdaus Taufik</span>
+          <Image
+            src="/Logo.png"
+            alt="Logo"
+            width={24}
+            height={24}
+            className="size-6 rounded-sm object-contain"
+            priority
+          />
+          <span className="text-sm font-medium tracking-wide">Farrel F Taufik</span>
         </div>
         <nav aria-label="Primary" className="hidden md:block">
           <ul className="flex items-center gap-6 text-sm">
@@ -65,7 +73,7 @@ export function SiteHeader() {
 
           <Button asChild variant="ghost" size="icon" aria-label="LinkedIn profile">
             <a
-              href="https://www.linkedin.com/in/farrel-firdaus-taufik-026319385"
+              href="https://www.linkedin.com/in/farrel-firdaus-taufik-026319385/"
               target="_blank"
               rel="noreferrer noopener"
               title="LinkedIn"
@@ -79,17 +87,25 @@ export function SiteHeader() {
             </a>
           </Button>
           <Button asChild variant="ghost" size="icon" aria-label="Send Email">
-            <a href="mailto:you@example.com" title="Email">
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=farrelt1307@gmail.com"
+              target="_blank"
+              rel="noreferrer noopener"
+              title="Compose in Gmail"
+            >
               <Mail className="size-4" aria-hidden="true" />
             </a>
           </Button>
 
           {/* existing Download CV button */}
           <a
-            href="/api/cv"
+            target="_blank"
+            rel="noreferrer noopener"
             download
-            className="rounded-md border border-border px-3 py-1.5 text-xs font-medium transition-colors hover:bg-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            className="inline-flex items-center rounded-md border border-border px-3 py-1.5 text-xs font-medium transition-colors hover:bg-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            aria-label="Download CV"
           >
+            <Download className="mr-1.5 size-4" aria-hidden="true" />
             Download CV
           </a>
         </div>

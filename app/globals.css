@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "tw-animate-css";
+/* @import "tw-animate-css"; */
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -36,6 +36,9 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  /* light theme gradient tokens */
+  --bg-grad-a: oklch(0.85 0.06 240 / 0.22); /* soft blue glow */
+  --bg-grad-b: oklch(0.9 0.05 190 / 0.18); /* soft teal glow */
 }
 
 .dark {
@@ -71,6 +74,9 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(0.269 0 0);
   --sidebar-ring: oklch(0.439 0 0);
+  /* dark theme gradient tokens */
+  --bg-grad-a: oklch(0.3 0.08 240 / 0.35); /* deeper blue glow */
+  --bg-grad-b: oklch(0.28 0.07 190 / 0.3); /* deeper teal glow */
 }
 
 @theme inline {
@@ -118,6 +124,12 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* apply subtle layered radial gradients for light/dark themes */
+    background-color: var(--background);
+    background-image: radial-gradient(600px 600px at 20% 0%, var(--bg-grad-a), transparent 60%),
+      radial-gradient(800px 800px at 80% 10%, var(--bg-grad-b), transparent 60%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 }
 

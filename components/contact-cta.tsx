@@ -1,4 +1,4 @@
-import { Github, Linkedin } from "lucide-react"
+import { Github, Linkedin, Mail } from "lucide-react"
 
 export function ContactCTA() {
   return (
@@ -16,13 +16,18 @@ export function ContactCTA() {
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <a
-            href="mailto:you@example.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=farrelt1307@gmail.com"
+            target="_blank"
+            rel="noreferrer noopener"
             className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            aria-label="Compose email in Gmail"
+            title="Compose in Gmail"
           >
+            <Mail className="mr-2 size-4" aria-hidden="true" />
             Get In Touch
           </a>
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/FarrelFirdausTaufik"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
@@ -32,7 +37,7 @@ export function ContactCTA() {
             <Github className="text-foreground" size={20} aria-hidden="true" />
           </a>
           <a
-            href="https://www.linkedin.com/in/your-handle"
+            href="https://www.linkedin.com/in/farrel-firdaus-taufik-026319385"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
