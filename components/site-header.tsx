@@ -19,7 +19,7 @@ export function SiteHeader() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-40 w-full border-b border-transparent bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-colors",
+        "fixed top-0 z-40 w-full border-b border-transparent bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-colors",
         scrolled && "border-border",
       )}
       role="banner"

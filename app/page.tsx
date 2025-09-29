@@ -22,7 +22,7 @@ export default function Page() {
       <SiteHeader />
       <section
         id="about"
-        className="mx-auto max-w-3xl px-6 pt-24 pb-16 md:pt-32 md:pb-20 text-center"
+        className="mx-auto max-w-3xl px-6 py-16 md:py-20 text-center min-h-screen flex flex-col justify-center"
         aria-labelledby="intro-heading"
       >
         <h1 id="intro-heading" className="text-pretty text-3xl font-semibold leading-tight md:text-5xl">
